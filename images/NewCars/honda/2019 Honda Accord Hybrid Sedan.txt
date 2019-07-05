@@ -1,0 +1,107 @@
+2019 Honda Accord Hybrid Sedan
+Bodystyle:  Sedan
+Engine:  2.0L I-4 cyl
+Transmission:  ECVT
+Drive Line:  Front-wheel Drive
+Exterior Colour:  Platinum White Pearl(NH-883P)-Black
+Interior Colour:  Black
+Kilometres:  364
+Stock #:  KA007
+Options
+PREMIUM PAINT
+WHEEL LOCKS
+Compression ratio: 13.50 to 1
+Engine horsepower: 143hp @ 6,200RPM
+Rear legroom: 1,026mm (40.4")
+Front headroom: 1,004mm (39.5")
+Turning radius: 5.8m (19.0')
+Passenger volume: 2,990L (105.6 cu.ft.)
+Exterior height: 1,450mm (57.1")
+Front shoulder room: 1,481mm (58.3")
+Wheelbase: 2,830mm (111.4")
+Exterior body width: 1,906mm (75.0")
+Engine bore x stroke: 81.0mm x 97.0mm (3.19" x 3.82")
+Rear hiproom: 1,398mm (55.0")
+Rear headroom: 948mm (37.3")
+Front legroom: 1,075mm (42.3")
+Interior maximum cargo volume: 473 L (17 cu.ft.)
+Exterior length: 4,882mm (192.2")
+Engine displacement: 2.0 L
+Engine torque: 129 lb.-ft. @ 3,500RPM
+Rear shoulder room: 1,436mm (56.5")
+Interior cargo volume: 473 L (17 cu.ft.)
+Front hiproom: 1,405mm (55.3")
+Body Exterior
+Door mirrors: body-colour
+Rear cargo: trunk
+Turn signal indicator mirrors
+Power door mirrors
+Bumpers: body-colour
+Heated door mirrors
+Powertrain
+Fuel economy city: 5L/100 km
+Mode select transmission
+Horsepower: 143hp @ 6,200RPM
+Fuel economy highway: 5L/100 km
+Engine litres: 2.0
+Transmission: continuously variable automatic
+Variable valve control
+Sequential multi-point fuel injection
+Manual-shift auto
+Electric motor horsepower: 181hp @ 5,000RPM
+Fuel tank capacity: 48.5L
+Fuel economy combined: 5.0L/100 km
+Cylinder configuration: I-4
+Recommended fuel: Regular Unleaded
+Hybrid system net power: 212hp @ 6,200RPM
+Engine location: front
+Torque: 129 lb.-ft. @ 3,500RPM
+Number of valves: 16
+Drive type: front-wheel
+Hybrid traction battery capacity (kWh): 1
+Hybrid electric powertrain type: full
+Safety and Security
+Traction control
+Brake assist
+Knee airbag
+Electronic stability
+Occupant sensing airbag
+Dual front impact airbags
+ABS brakes
+Perimeter/approach lights
+Security system
+Dual front side impact airbags
+4 wheel disc brakes
+Panic alarm
+Overhead airbag
+Ignition disable
+Suspension/Handling
+Front tires: 225/50VR17.0
+Rear tires: 225/50VR17.0
+Speed-sensing steering
+Four wheel independent suspension
+Rear anti-roll bar
+Front anti-roll bar
+Power steering
+Alloy wheels
+Lighting, Visibility and Instrumentation
+Forward collision: Collision Mitigation Braking System (CMBS) + FCW mitigation
+Tachometer
+Fully automatic headlights
+Speed limit sign recognition
+Lane departure: Road Departure Mitigation (RDM) active
+Trip computer
+Delay-off headlights
+Display: digital/analog
+Auto high-beam headlights
+Variably intermittent wipers
+Rear window defroster
+Low tire pressure warning
+Speed sensitive wipers
+Outside temperature display
+Exterior parking camera rear
+Front reading lights
+Front fog lights
+Compass
+Exterior parking camera right: Honda LaneWatch yes
+
