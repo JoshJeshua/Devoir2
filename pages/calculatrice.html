@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventaire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/icon2.png" sizes="32x32" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <script type="text/javascript" src="../js/calculate.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container bg-secondary">
+        <div class="container">
+            <div class="row"> <br>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav class="navbar navbar-expand-sm bg-dark">
+                        <a href="#" class="navbar brand"><img src="../images/logo2.png" width="80px" height="80px"
+                                alt=""></a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                            <i class="fa fa-bars fa-2px"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link text-light" href="../index.html"><i
+                                            class="fa fa-home fa-2px"></i>
+                                        Acceuil</a></li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  text-light"
+                                        href="#" id="navbardrop" data-toggle="dropdown">Service</a>
+                                    <div class="dropdown-menu bg-dark" style="border: none">
+                                        <a class="dropdown-item text-light" href="../pages/pageconseil.html"><i
+                                                class="fa fa-user-circle fa-2px"></i>
+                                            Conseils</a>
+                                        <a class="dropdown-item text-light" href="../pages/calculatrice.html"><i class="fa fa-money fa-2px"></i>
+                                            Financement</a>
+ <!--                                        <a class="dropdown-item text-light" href="../pages/evaluation.html"><i class="fa fa-pencil fa-2px"></i>
+                                            Evaluation</a></div> -->
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  text-light"
+                                        href="#" id="navbardrop" data-toggle="dropdown">Outil</a>
+                                    <div class="dropdown-menu bg-dark" style="border: none">
+                                        <a class="dropdown-item text-light" href="../pages/calculatrice.html"><i
+                                                class="fa fa-calculator fa-2px"></i>
+                                            Calculatrice</a>
+                                        <a class="dropdown-item text-light" href="../pages/pageformulaire.html"><i
+                                                class="fa fa-shopping-cart fa-2px"></i>
+                                            Commandez votre auto</a>
+                                        <a class="dropdown-item text-light" href="../pages/tableauInventaire.html"><i
+                                                class="fa fa-columns fa-2px"></i>
+                                            Inventaire</a></div>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  text-light"
+                                        href="#" id="navbardrop" data-toggle="dropdown">Nous joindre</a>
+                                    <div class="dropdown-menu bg-dark" style="border: none">
+                                        <a class="dropdown-item text-light" href="../pages/pageformulaire.html"><i class="fa fa-users fa-2px"></i>
+                                            Nous joindre</a>
+                                        <a class="dropdown-item text-light" href="#"><i class="fa fa-car fa-2px"></i>
+                                            Carrière</a>
+                                        <a class="dropdown-item text-light" href="#"><i
+                                                class="fa fa-plus-circle fa-2px"></i>
+                                            Autres</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Tableau Calculate -->
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-6">
+                                <table class="table table-sm" style="border: 0px solid #ffc107">
+                                    <tr>
+                                        <th>Enter Loan Data:</th>
+                                        <td></td>
+                                        <th>Loan Balance, Cumulative Equity, and Interest Payments</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Amount of the loan ($):</td>
+                                        <td><input class="form-control  bg-light" id="amount" onchange="calculate();">
+                                        </td>
+                                        <td rowspan=8>
+                                            <canvas id="graph" width="400" height="250"></canvas></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Annual interest (%):</td>
+                                        <td><input class="form-control  bg-light" id="apr" onchange="calculate();">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Repayment period (years):</td>
+                                        <td><input class="form-control  bg-light" id="years" onchange="calculate();">
+                                        </td>
+                                    <tr>
+                                        <td class="text-secondary">Zipcode (to find lenders):</td>
+                                        <td class="text-secondary"><input
+                                                class="form-control text-secondary bg-secondary border-secondary"
+                                                id="zipcode" onchange="calculate();"></td>
+                                    <tr>
+                                        <th>Approximate Payments:</th>
+                                        <td><button class="btn btn-dark" onclick="calculate();">Calculate</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monthly payment:</td>
+                                        <td>$<span class="output" id="payment"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total payment:</td>
+                                        <td>$<span class="output" id="total"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total interest:</td>
+                                        <td>$<span class="output" id="totalinterest"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sponsors:</th>
+                                        <td colspan=2>
+                                            Apply for your loan with one of these fine lenders:
+                                            <div id="lenders"></div>
+                                        </td>
+                                    </tr>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button type="button" class="btn btn-dark">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+    </div>
+
+</body>
+
+</html>

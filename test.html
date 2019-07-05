@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // on cree le tableau bleu, contenant les lignes
+        var grille = new Array();
+
+        // on cree les lignes (tableau vert) les unes après les autres
+        for (var i = 0; i < 9; i++)
+            grille[i] = new Array();
+
+        // on parcourt les lignes...
+        for (var i = 0; i < 9; i++)
+            // ... et dans chaque ligne, on parcourt les cellules
+            for (var j = 0; j < 9; j++)
+                grille[i][j] = 0 + j + 1; //Assignation des valeurs...
+        
+
+        //Afficher tout le tableau...
+        for (var i = 0; i < 9; i++)
+            for (var j = 0; j < 9; j++)
+                document.writeln("Case " + i + "-" + j + " : " + grille[i][j]);
+        document.writeln("<br>" + "<br>" + "Ligne 5" + "<br>");
+        //Afficher une seule ligne...
+        for (var i = 5; i < 6; i++)
+            for (var j = 0; j < 9; j++)
+                document.writeln("Case " + i + "-" + j + " : " + grille[i][j]);
+        //Afficher colones spécifiques...
+        document.writeln("<br>"+"<br>");
+        document.writeln("Case 3-4 : " + grille[3][4]);
+    </script>
+</body>
+
+</html>

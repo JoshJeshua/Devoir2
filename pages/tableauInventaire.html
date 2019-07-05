@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventaire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/icon2.png" sizes="32x32" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/inventaire.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container bg-secondary">
+        <div class="container">
+            <div class="row"> <br>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <nav class="navbar navbar-expand-sm bg-dark">
+                        <a href="#" class="navbar brand"><img src="../images/logo2.png" width="80px" height="80px"
+                                alt=""></a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                            <i class="fa fa-bars fa-2px"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link text-light" href="../index.html"><i
+                                            class="fa fa-home fa-2px"></i>
+                                        Acceuil</a></li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  text-light" href="#"
+                                        id="navbardrop" data-toggle="dropdown">Service</a>
+                                    <div class="dropdown-menu bg-dark" style="border: none">
+                                        <a class="dropdown-item text-light" href="../pages/pageconseil.html"><i
+                                                class="fa fa-user-circle fa-2px"></i>
+                                            Conseils</a>
+                                        <a class="dropdown-item text-light" href="../pages/calculatrice.html"><i
+                                                class="fa fa-money fa-2px"></i>
+                                            Financement</a>
+                                       <!--  <a class="dropdown-item text-light" href="../pages/evaluation.html"><i
+                                                class="fa fa-pencil fa-2px"></i>
+                                            Evaluation</a></div> -->
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  text-light" href="#"
+                                        id="navbardrop" data-toggle="dropdown">Outil</a>
+                                    <div class="dropdown-menu bg-dark" style="border: none">
+                                        <a class="dropdown-item text-light" href="../pages/calculatrice.html"><i
+                                                class="fa fa-calculator fa-2px"></i>
+                                            Calculatrice</a>
+                                        <a class="dropdown-item text-light" href="../pages/pageformulaire.html"><i
+                                                class="fa fa-shopping-cart fa-2px"></i>
+                                            Commandez votre auto</a>
+                                        <a class="dropdown-item text-light" href="../pages/tableauInventaire.html"><i
+                                                class="fa fa-columns fa-2px"></i>
+                                            Inventaire</a></div>
+                                </li>
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle  text-light" href="#"
+                                        id="navbardrop" data-toggle="dropdown">Nous joindre</a>
+                                    <div class="dropdown-menu bg-dark" style="border: none">
+                                        <a class="dropdown-item text-light" href="../pages/pageformulaire.html"><i
+                                                class="fa fa-users fa-2px"></i>
+                                            Nous joindre</a>
+                                        <a class="dropdown-item text-light" href="#"><i class="fa fa-car fa-2px"></i>
+                                            Carrière</a>
+                                        <a class="dropdown-item text-light" href="#"><i
+                                                class="fa fa-plus-circle fa-2px"></i>
+                                            Autres</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Recherche -->
+        <br>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="row justify-content-center bg-dark" style="padding-left: 20px; padding-right:20px;">
+                <h3 class="text-light" >Rechercher une Marque de voiture :</h3></div>
+                <input type="text" id="myRechercheMarque" onkeyup="controlRecherche()"
+                    placeholder="Rechercher par marque.." title="Type in a brand">
+            </div>
+        </div>
+        <!-- Tableau -->
+        <div class="container bg-light">
+            <!-- <div class="row justify-content-end">
+            <div class="col-3"><button class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>Add New
+                    Employee</button> </div>
+        </div> -->
+        </div>
+        <div class="container justify-content-between" href="#site-search">
+            <div class="table-responsive">
+                <table class="table table-hover" id="myTable">
+                    <thead>
+                        <tr class="header">
+                            <th>Photo</th>
+                            <th>Condition</th>
+                            <th>Marque</th>
+                            <th>Modèle</th>
+                            <th>Année</th>
+                            <th>Odomètre</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <!-- <tr>
+
+                <td colspan="5">
+                    <form>
+                        <input class="form-control" type="search" placeholder="global search">
+                    </form>
+                </td>
+            </tr> -->
+
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide1" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/NewCars/toyota/toyotaCorolaFront.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/NewCars/toyota/toyotaCorolaBack.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/NewCars/toyota/toyotaCorolaInt.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide1" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide1" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span><span class="badge badge-info">Nouveau</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Neuf</td>
+                        <td>Toyota</td>
+                        <td>Corolla</td>
+                        <td>2020</td>
+                        <td>0 kms</td>
+                        <td>$ 18000</td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide2" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/honda/mazdaCX5Front.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/honda/mazdaCX5Back.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/honda/mazdaCX5Int.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide2" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide2" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Mazda</td>
+                        <td>CX-5</td>
+                        <td>2018</td>
+                        <td>40000 kms</td>
+                        <td>$ 29000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide3" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/Audi/audiA5Front.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/Audi/audiA5Back.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/Audi/audiA5Int.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide3" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide3" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Audi</td>
+                        <td>A5</td>
+                        <td>2011</td>
+                        <td>136000 kms</td>
+                        <td>$ 18000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide4" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/Audi/audiA3Front.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/Audi/audiA3Back.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/Audi/audiA3Int.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide4" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide4" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Audi</td>
+                        <td>A3</td>
+                        <td>2011</td>
+                        <td>40000 kms</td>
+                        <td>$ 15000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide5" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/mercedes/mbGlaFront.png"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/mercedes/mbGlaBack.png"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/mercedes/mbGlaInside.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide5" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide5" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Mercedes-Benz</td>
+                        <td>GLA</td>
+                        <td>2015</td>
+                        <td>10000 kms</td>
+                        <td>$ 29000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide6" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/mercedes/mbAmgC43Front.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/mercedes/mbAmgC43Back.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/mercedes/mbAmgC43Inside.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide6" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide6" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span><span class="badge badge-info">Nouveau</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Neuf</td>
+                        <td>Mercedes-Benz</td>
+                        <td>C43 AMG</td>
+                        <td>2018</td>
+                        <td>10000 kms</td>
+                        <td>$ 45000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide7" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/NewCars/toyota/toyotaRav4Front.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/NewCars/toyota/toyotaRav4Back.png"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/NewCars/toyota/toyotaRav4Int.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide7" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide7" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span><span class="badge badge-info">Nouveau</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Neuf</td>
+                        <td>Toyota</td>
+                        <td>RAV4</td>
+                        <td>2019</td>
+                        <td>0 kms</td>
+                        <td>$ 31500</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide8" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/mazda/mazda3Front.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/mazda/mazda3Back.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/mazda/mazda3Inside.png"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide8" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide8" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Mazda</td>
+                        <td>3</td>
+                        <td>2015</td>
+                        <td>60000 kms</td>
+                        <td>$ 12000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide9" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/ford/fordFocusFront.png"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/ford/fordFocusBack.jpg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/ford/fordFocusInside.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide9" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide9" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Ford</td>
+                        <td>Focus HB</td>
+                        <td>2015</td>
+                        <td>100000 kms</td>
+                        <td>$ 10000</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 25%">
+                            <div id="slide10" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../images/UsedCars/ford/fordEscapeFront.jpg"
+                                            alt="Front">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/ford/fordEscapeBack.jpeg"
+                                            alt="Back">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../images/UsedCars/ford/fordEscapeInside.jpg"
+                                            alt="Inside">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#slide10" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">anterieur</span>
+                                </a>
+                                <a class="carousel-control-next" href="#slide10" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">suivant</span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>Occasion</td>
+                        <td>Ford</td>
+                        <td>Escape</td>
+                        <td>2015</td>
+                        <td>60000 kms</td>
+                        <td>$ 13000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row"><br></div>
+    </div>
+    <!-- Bouton Inventaire -->
+    <div class="container">
+        <div class="collapse row justify-content-center" id="dataTable">
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" onclick="controlInventaire()" class="btn btn-primary" data-toggle="collapse"
+                data-target="#dataTable">Details</button>
+        </div>
+    </div>
+</body>
+
+</html>
